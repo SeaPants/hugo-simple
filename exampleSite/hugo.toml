@@ -18,7 +18,7 @@ disableKinds = ["taxonomy"]
 tag = "tags"
 
 [permalinks]
-blog = "/:slugorfilename/"
+blog = "/:slugorcontentbasename/"
 tags = "/blog/:slug"
 
 [markup.goldmark.renderer]
@@ -38,9 +38,12 @@ description = "Hugo Simple Demo"
 favicon = "images/favicon.png"
 dateFormat = "2006-01-02"
 hideMadeWithLine = false
+hideRSSLink = false
+
 [params.author]
 name = "Shaolong Chen"
 email = "shaolong.chen@outlook.it"
+fediverse = "@chensl@mastodon.social"
 
 [[menu.main]]
 name = "Home"
@@ -53,6 +56,9 @@ weight = 20
 
 [services.rss]
 limit = 42
+
+[pagination]
+pagerSize = 16
 
 [outputs]
 # Generate RSS for home only.
